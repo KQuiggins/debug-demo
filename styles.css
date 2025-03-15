@@ -1,0 +1,105 @@
+/* Base Reset / Body Styling */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Container to center content and add spacing */
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading style */
+  .container h1 {
+    margin-top: 0;
+    text-align: center;
+    font-weight: normal;
+  }
+  
+  /* Input and Button Section */
+  .input-section {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  #todo-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    outline: none;
+  }
+  
+  #todo-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Shared button styling */
+  button {
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.25s, opacity 0.25s;
+  }
+  
+  /* Add button style */
+  #add-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* To-Do List Style */
+  #todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Individual list items */
+  #todo-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Task text (span) inside list items */
+  #todo-list li span {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  /* Edit/Delete buttons inside list items */
+  #todo-list li button {
+    margin-left: 5px;
+    background-color: #666;
+    color: #fff;
+  }
+  
+  #todo-list li button:hover {
+    background-color: #333;
+  }
+  

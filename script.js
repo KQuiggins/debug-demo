@@ -5,8 +5,8 @@ let todos = [];
  * Renders the todos in the DOM
  */
 function renderTodos() {
-    // change spelling to elemant. Error: getElemantById is not a function
     const todoList = document.getElementById('todo-list');
+    console.log('Rendering todos:', todos); 
     todoList.innerHTML = ''; // Clear the list
 
     todos.forEach((todoItem, index) => {
@@ -41,9 +41,11 @@ function renderTodos() {
 function addTodo() {
     const input = document.getElementById('todo-input');
     const newTodo = input.value.trim();
+    console.log('Adding todo:', newTodo); // Debug: log new todo input
 
     if (newTodo !== '') {
         todos.push(newTodo);
+        console.log('Updated todos:', todos); // Debug: log updated todos array
         input.value = ''; // clear the input field
         renderTodos();
     }
@@ -54,7 +56,9 @@ function addTodo() {
  * @param {number} index - The index of the todo to delete
  */
 function deleteTodo(index) {
+    console.log('Deleting todo at index:', index); // Debug: log index of todo to delete
     todos.splice(index, 1);
+    console.log('Updated todos:', todos); // Debug: log updated todos array
     renderTodos();
 }
 
@@ -63,10 +67,12 @@ function deleteTodo(index) {
  * @param {number} index - The index of the todo to edit
  */
 function editTodo(index) {
-    // Prompt for a new value (simple for demonstration)
+    // Prompt for a new value
     const updatedValue = prompt('Edit your todo:', todos[index]);
+    console.log('Editing todo at index:', index, 'New value:', updatedValue); // Debug: log index and new value
     if (updatedValue !== null && updatedValue.trim() !== '') {
         todos[index] = updatedValue.trim();
+        console.log('Updated todos:', todos); // Debug: log updated todos array
         renderTodos();
     }
 }
